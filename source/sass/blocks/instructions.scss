@@ -1,0 +1,29 @@
+.instructions__title {
+  margin: 0;
+  margin-bottom: 15px;
+  padding: 10px 10px 10px 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.instructions__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.instructions__item {
+  margin: 0;
+  border: 1px solid #f0efe9;
+  border-radius: 16px;
+}
+
+.instructions__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.instructions__item p {
+  margin: 0;
+  padding: 24px 25px;
+}

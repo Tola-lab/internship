@@ -1,0 +1,23 @@
+.grant {
+  color: $base-white-color;
+  background-color: $extra-background-color;
+}
+
+.grant__wrapper {
+  padding: 70px 15px;
+}
+
+.grant__title {
+  margin-bottom: 15px;
+  color: $base-white-color;
+}
+
+.grant__wrapper > p {
+  margin: 0;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+.grant__wrapper img {
+  margin-bottom: 30px;
+}

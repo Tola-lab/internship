@@ -1,0 +1,70 @@
+.accordion__item {
+  padding: 20px 15px;
+  border: 2px solid $extra-background-color;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.accordion__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.accordion__summary {
+  position: relative;
+  padding: 2px 55px 2px 0;
+  list-style: none;
+  font-size: 16px;
+  line-height: 18px;
+  color: $extra-background-color;
+  cursor: pointer;
+}
+
+.accordion__summary::-webkit-details-marker {
+  display: none;
+}
+
+.accordion__summary::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  background-color: $extra-background-color;
+  border-radius: 50%;
+}
+
+.accordion__summary::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  background:
+    linear-gradient($base-white-color, $base-white-color) center / 18px 1px no-repeat,
+    linear-gradient($base-white-color, $base-white-color) center / 1px 18px no-repeat;
+}
+
+.accordion__panel {
+  color: $base-white-color;
+}
+
+.accordion__item[open] {
+  color: $base-white-color;
+  background-color: $extra-background-color;
+}
+
+.accordion__item[open] .accordion__summary {
+  color: $base-white-color;
+}
+
+.accordion__item[open] .accordion__summary::before {
+  background-color: $base-white-color;
+}
+
+.accordion__item[open] .accordion__summary::after {
+  background: linear-gradient($extra-background-color, $extra-background-color) center / 18px 1px no-repeat;
+}

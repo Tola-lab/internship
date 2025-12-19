@@ -1,0 +1,24 @@
+.programs {
+  position: relative;
+}
+
+.programs__title {
+  padding: 50px 15px 30px;
+}
+
+.programs .swiper-button {
+  position: absolute;
+  top: 50px;
+  right: 15px;
+}
+
+.programs__button {
+  margin-left: 15px;
+  margin-bottom: 50px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 0.24px;
+  background-color: transparent;
+}
+

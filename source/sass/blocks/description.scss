@@ -1,0 +1,22 @@
+.description {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin: 0;
+}
+
+.description dt {
+  margin-bottom: 8px;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 0.12px;
+  color: $extra-background-color;
+  text-transform: uppercase;
+}
+
+.description dd {
+  margin: 0;
+  font-size: 12px;
+  line-height: 14px;
+}
+

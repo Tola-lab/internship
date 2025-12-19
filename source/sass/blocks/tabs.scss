@@ -1,0 +1,20 @@
+.tabs__button {
+  padding: 0 14px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 0.24px;
+  color: $extra-background-color;
+  background-color: transparent;
+  border: none;
+  text-transform: uppercase;
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.tabs__button--active {
+  padding: 10px 14px;
+  border: 2px solid $extra-background-color;
+  border-radius: 20px;
+  opacity: 1;
+}

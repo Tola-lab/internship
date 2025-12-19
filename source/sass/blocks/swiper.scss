@@ -1,0 +1,27 @@
+.swiper__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.swiper__header p {
+  margin: 0;
+  margin-left: 10px;
+  font-size: 14px;
+  line-height: 18px;
+  color: $extra-background-color;
+}
+
+.swiper__content h3 {
+  margin: 0;
+  margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: $extra-background-color;
+}
+
+.swiper__content p {
+  margin: 0;
+}
