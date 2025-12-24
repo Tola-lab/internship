@@ -11,12 +11,31 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  counter-reset: numbers;
 }
 
 .instructions__item {
+  position: relative;
   margin: 0;
   border: 1px solid #f0efe9;
   border-radius: 16px;
+  counter-increment: numbers;
+}
+
+.instructions__item::before {
+  content: counter(numbers);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  top: -11px;
+  left: -16px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 18px;
+  background-color: $extra-background-color;
 }
 
 .instructions__item:not(:last-child) {
@@ -27,3 +46,4 @@
   margin: 0;
   padding: 24px 25px;
 }
+

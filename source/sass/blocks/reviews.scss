@@ -1,3 +1,24 @@
-.reviews__title {
-  padding: 50px 15px 0;
+.reviews__wrapper {
+  position: relative;
+  padding: 50px 15px;
+}
+
+.reviews .swiper-button {
+  position: absolute;
+  top: 50px;
+  right: 15px;
+}
+
+.reviews .swiper-button-prev {
+  right: 45px;
+}
+
+.reviews__swiper .swiper-slide {
+  padding: 30px 15px;
+  border: 2px solid #316dc2;
+  border-radius: 16px;
+}
+
+.reviews__swiper .swiper-slide::before {
+  content: none;
 }

@@ -1,7 +1,10 @@
 .header {
+  position: absolute;
   display: flex;
   justify-content: space-between;
   padding: 20px 15px;
+  width: 320px;
+  z-index: 2;
 }
 
 .header__logo {

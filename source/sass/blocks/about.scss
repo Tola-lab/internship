@@ -52,9 +52,25 @@
 }
 
 .about__item {
+  position: relative;
   margin-top: 22px;
   border: 1px solid #f0efe9;
   border-radius: 16px;
+}
+
+.about__item::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 42px;
+  height: 42px;
+  top: -20px;
+  left: -20px;
+  background-color: $extra-background-color;
+  background-image: url("../../../__spritemap#sprite-star-view");
+  background-size: 18px 22px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .about__item h4 {

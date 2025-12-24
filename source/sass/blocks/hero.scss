@@ -1,6 +1,56 @@
+.hero__swiper {
+  color: $extra-background-color;
+}
+
+.hero__swiper .swiper-slide--global {
+  background-image: url("../../img/global-hero-mobile@1x.jpg");
+
+  @media (resolution >= 2dppx) {
+    background-image: url("../../img/global-hero-mobile@2x.jpg");
+  }
+}
+
+.hero__swiper .swiper-slide--volunteer {
+  background-image: url("../../img/volunteer-hero-mobile@1x.jpg");
+
+  @media (resolution >= 2dppx) {
+    background-image: url("../../img/volunteer-hero-mobile@2x.jpg");
+  }
+}
+
+.hero__swiper .swiper-slide--program {
+  background-image: url("../../img/program-hero-mobile@1x.jpg");
+
+  @media (resolution >= 2dppx) {
+    background-image: url("../../img/program-hero-mobile@2x.jpg");
+  }
+}
+
+.hero__swiper .swiper-slide {
+  padding: 74px 15px 20px;
+  min-height: 568px;
+}
+
+.hero__swiper h2 {
+  margin: 0;
+  padding: 20px 15px 16px 14px;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.hero__swiper p {
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0 40px 15px 14px;
+  font-size: 16px;
+  color: $base-black-color;
+}
+
 .hero__button {
   margin-left: 15px;
   padding: 15px 59px 15px 21px;
+  max-width: 250px;
   font-size: 12px;
   line-height: 12px;
   letter-spacing: 0.24px;

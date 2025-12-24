@@ -2,8 +2,8 @@
   position: relative;
 }
 
-.programs__title {
-  padding: 50px 15px 30px;
+.programs__wrapper {
+  padding: 50px 15px;
 }
 
 .programs .swiper-button {
@@ -12,9 +12,91 @@
   right: 15px;
 }
 
+.programs .swiper-button-prev {
+  right: 45px;
+}
+
+.programs__swiper .swiper-wrapper {
+  margin-bottom: 30px;
+}
+
+.programs__swiper .swiper-slide--internship {
+  background-image: url("../../img/internship-program-bg@1x.jpg");
+
+  @media (resolution >= 2dppx) {
+    background-image: url("../../img/internship-program-bg@2x.jpg");
+  }
+}
+
+.programs__swiper .swiper-slide--volunteer {
+  background-image: url("../../img/volunteer-program-bg@1x.jpg");
+
+  @media (resolution >= 2dppx) {
+    background-image: url("../../img/volunteer-program-bg@2x.jpg");
+  }
+}
+
+.programs__swiper .swiper-slide--learn {
+  background-image: url("../../img/learn-program-bg@1x.jpg");
+
+  @media (resolution >= 2dppx) {
+    background-image: url("../../img/learn-program-bg@2x.jpg");
+  }
+}
+
+.programs__swiper .swiper-slide {
+  padding: 18px 10px;
+  min-height: 400px;
+}
+
+.programs__swiper .swiper__text-wrapper {
+  position: relative;
+  padding: 18px 10px;
+}
+
+.programs__swiper h3 {
+  margin: 0;
+  padding: 18px 35px 6px 18px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: $extra-background-color;
+}
+
+.programs__swiper p {
+  margin: 0;
+  padding: 12px 77px 15px 18px;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.programs__swiper a {
+  position: absolute;
+  padding: 0;
+  right: 28px;
+  bottom: 39px;
+  width: 30px;
+  height: 30px;
+  background-color: $extra-background-color;
+  border-radius: 50%;
+}
+
+.programs__swiper a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 10px;
+  right: 10px;
+  width: 10px;
+  height: 10px;
+  background-color: $base-white-color;
+  mask-image: url("../../../__spritemap#sprite-arrow-view");
+  mask-size: 10px 10px;
+  mask-position: center;
+  mask-repeat: no-repeat;
+}
+
 .programs__button {
-  margin-left: 15px;
-  margin-bottom: 50px;
   font-weight: 500;
   font-size: 12px;
   line-height: 12px;

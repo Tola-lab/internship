@@ -1,11 +1,36 @@
-.swiper__header {
+.swiper .swiper-slide {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 12px;
+}
+
+.swiper .swiper-slide::before {
+  content: "";
+  position: absolute;
+  display: block;
+  inset: 0;
+  background:
+    linear-gradient(
+      rgb(49, 109, 194, 0.2),
+      rgb(49, 109, 194, 0.2)
+    );
+  border-radius: 12px;
+}
+
+.swiper-header {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  gap: 15px 10px;
   margin-bottom: 25px;
 }
 
-.swiper__header p {
+.swiper-header p {
   margin: 0;
   margin-left: 10px;
   font-size: 14px;
@@ -13,7 +38,7 @@
   color: $extra-background-color;
 }
 
-.swiper__content h3 {
+.swiper-content h3 {
   margin: 0;
   margin-bottom: 20px;
   font-weight: 400;
@@ -22,6 +47,45 @@
   color: $extra-background-color;
 }
 
-.swiper__content p {
+.swiper-content p {
   margin: 0;
+}
+
+.swiper-button .swiper-navigation-icon {
+  display: none;
+}
+
+.swiper-button {
+  position: absolute;
+  display: block;
+  width: 22px;
+  height: 22px;
+  border: none;
+  cursor: pointer;
+}
+
+.swiper-button::after,
+.swiper-button--deactivated::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  background-color: $extra-background-color;
+  mask-image: url("../../../__spritemap#sprite-arrow-view");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: 10px 10px;
+  transform: rotate(45deg);
+}
+
+.swiper-button-prev {
+  transform: rotate(-180deg);
+}
+
+.swiper-button--deactivated::after {
+  background-color: $disabled-color;
+  cursor: default;
 }
