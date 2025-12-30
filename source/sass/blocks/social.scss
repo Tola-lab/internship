@@ -31,3 +31,16 @@
 .social__link--reddit::after {
   mask-image: url("../../../__spritemap#sprite-reddit-view");
 }
+
+@media (min-width: $tablet-width) {
+  .social__link {
+    width: 36px;
+    height: 36px;
+  }
+
+  .social__link::after {
+    width: 36px;
+    height: 36px;
+    mask-size: 16px 16px;
+  }
+}

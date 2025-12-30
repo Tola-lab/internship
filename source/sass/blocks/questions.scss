@@ -6,3 +6,23 @@
   margin-bottom: 30px;
   text-align: center;
 }
+
+@media (min-width: $tablet-width) {
+  .questions__wrapper {
+    padding: 50px 45px;
+  }
+
+  .questions__title {
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .questions__wrapper {
+    padding: 60px 206px;
+  }
+
+  .questions__title {
+    margin-bottom: 60px;
+  }
+}

@@ -1,11 +1,19 @@
+.reviews {
+  overflow: hidden;
+}
+
 .reviews__wrapper {
   position: relative;
   padding: 50px 15px;
 }
 
+.reviews__title {
+  padding: 5px 5px 5px 0;
+}
+
 .reviews .swiper-button {
   position: absolute;
-  top: 50px;
+  top: 54px;
   right: 15px;
 }
 
@@ -21,4 +29,54 @@
 
 .reviews__swiper .swiper-slide::before {
   content: none;
+}
+
+@media (min-width: $tablet-width) {
+  .reviews__wrapper {
+    margin-right: -45px;
+    padding: 50px 45px 112px;
+  }
+
+  .reviews .swiper-button {
+    top: auto;
+    right: 90px;
+    bottom: 50px;
+  }
+
+  .reviews .swiper-button-prev {
+    right: 122px;
+  }
+
+  .reviews__swiper .swiper-slide {
+    margin-right: 15px;
+    padding: 50px;
+    width: 560px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .reviews__wrapper {
+    margin: 0;
+    padding: 60px 100px 122px;
+  }
+
+  .reviews .swiper-button {
+    top: auto;
+    right: 100px;
+    bottom: 60px;
+  }
+
+  .reviews .swiper-button-prev {
+    right: 132px;
+    left: auto;
+  }
+
+  .reviews__swiper .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 50px 48px 50px 52px;
+    width: 604px;
+    min-height: 483px;
+  }
 }

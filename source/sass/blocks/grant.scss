@@ -12,13 +12,61 @@
   color: $base-white-color;
 }
 
-.grant__wrapper > p {
+.grant__coordinates > p {
   margin: 0;
   margin-bottom: 30px;
   font-size: 14px;
 }
 
-.grant__wrapper img {
+.grant__coordinates img {
   margin-bottom: 30px;
   border-radius: 18px;
+}
+
+@media (min-width: $tablet-width) {
+  .grant__wrapper {
+    padding: 100px 45px;
+  }
+
+  .grant__title {
+    margin-bottom: 30px;
+  }
+
+  .grant__coordinates > p {
+    margin-bottom: 40px;
+    padding-right: 180px;
+    font-size: 16px;
+    color: $base-background-color;
+  }
+
+  .grant__coordinates img {
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .grant__wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 138px;
+    padding: 120px 206px 120px 100px;
+  }
+
+  .grant__coordinates {
+    width: 498px;
+  }
+
+  .grant__coordinates > p {
+    margin-bottom: 40px;
+    padding: 0;
+    line-height: 26px;
+  }
+
+  .grant__coordinates img {
+    margin: 0;
+  }
+
+  .grant__instructions {
+    width: 498px;
+  }
 }

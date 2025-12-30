@@ -1,14 +1,11 @@
 .programs {
   position: relative;
-}
-
-.programs__wrapper {
-  padding: 50px 15px;
+  overflow-x: hidden;
 }
 
 .programs .swiper-button {
   position: absolute;
-  top: 50px;
+  top: 54px;
   right: 15px;
 }
 
@@ -16,15 +13,28 @@
   right: 45px;
 }
 
+.programs__wrapper {
+  padding: 50px 15px;
+}
+
+.programs__title {
+  padding: 5px 4px 5px 0;
+}
+
+.programs__button {
+  font-weight: 500;
+  background-color: transparent;
+}
+
 .programs__swiper .swiper-wrapper {
   margin-bottom: 30px;
 }
 
 .programs__swiper .swiper-slide--internship {
-  background-image: url("../../img/internship-program-bg@1x.jpg");
+  background-image: url("../../img/internship-program-mobile@1x.jpg");
 
   @media (resolution >= 2dppx) {
-    background-image: url("../../img/internship-program-bg@2x.jpg");
+    background-image: url("../../img/internship-program-mobile@2x.jpg");
   }
 }
 
@@ -49,9 +59,10 @@
   min-height: 400px;
 }
 
-.programs__swiper .swiper__text-wrapper {
-  position: relative;
-  padding: 18px 10px;
+.programs__swiper .swiper-text {
+  --nb-r: 14px;
+  --nb-w: 96px;
+  --nb-h: 13px;
 }
 
 .programs__swiper h3 {
@@ -96,11 +107,182 @@
   mask-repeat: no-repeat;
 }
 
-.programs__button {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 12px;
-  letter-spacing: 0.24px;
-  background-color: transparent;
+@media (min-width: $tablet-width) {
+  .programs .swiper-button {
+    position: absolute;
+    top: auto;
+    right: 90px;
+    bottom: 50px;
+    z-index: 3;
+  }
+
+  .programs .swiper-button-prev {
+    right: 122px;
+  }
+
+  .programs__wrapper {
+    position: relative;
+    padding: 50px 45px 60px;
+    margin-right: -45px;
+  }
+
+  .programs__title {
+    margin-bottom: 40px;
+    padding: 3px 3px 3px 0;
+  }
+
+  .programs__button {
+    position: absolute;
+    top: 50px;
+    right: 90px;
+  }
+
+  .programs__swiper .swiper-wrapper {
+    margin-bottom: 52px;
+  }
+
+  .programs__swiper .swiper-slide--internship {
+    background-image: url("../../img/internship-program-tablet@1x.jpg");
+
+    @media (resolution >= 2dppx) {
+      background-image: url("../../img/internship-program-tablet@2x.jpg");
+    }
+  }
+
+  .programs__swiper .swiper-slide--volunteer {
+    background-position: 53% 0;
+  }
+
+  .programs__swiper .swiper-slide {
+    margin-right: 15px;
+    padding: 10px 20px;
+    width: 324px;
+    min-height: 420px;
+  }
+
+  .programs__swiper .swiper-text {
+    --nb-r: 14px;
+    --nb-w: 83px;
+    --nb-h: 9px;
+  }
+
+  .programs__swiper h3 {
+    margin: 0;
+    padding: 18px 38px 6px 18px;
+    font-size: 20px;
+    line-height: 14px;
+  }
+
+  .programs__swiper p {
+    padding: 12px 71px 15px 18px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .programs__swiper a {
+    right: 38px;
+    bottom: 40px;
+  }
+
+  .programs__swiper .swiper-scrollbar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: calc(100% - 161px);
+    height: 2px;
+    background: rgb($extra-background-color, 0.2);
+    border-radius: 2px;
+  }
+
+  .programs__swiper .swiper-scrollbar-drag {
+    height: 2px;
+    background: $extra-background-color;
+    border-radius: 2px;
+    cursor: grab;
+  }
+
+  .programs__swiper .swiper-scrollbar-drag:active {
+    cursor: grabbing;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .programs .swiper-button {
+    right: 100px;
+    bottom: 60px;
+    z-index: 3;
+  }
+
+  .programs .swiper-button-prev {
+    left: auto;
+    right: 130px;
+  }
+
+  .programs__wrapper {
+    position: relative;
+    padding: 60px 100px;
+    margin: 0;
+  }
+
+  .programs__button {
+    position: absolute;
+    top: 60px;
+    right: 100px;
+  }
+
+  .programs__swiper .swiper-wrapper {
+    margin-bottom: 64px;
+  }
+
+  .programs__swiper .swiper-slide--internship {
+    background-image: url("../../img/internship-program-desktop@1x.jpg");
+
+    @media (resolution >= 2dppx) {
+      background-image: url("../../img/internship-program-desktop@2x.jpg");
+    }
+  }
+
+  .programs__swiper .swiper-slide {
+    margin: 0;
+    padding: 17px 51px 17px 20px;
+    width: 392px;
+    background-position: 50% 2px;
+  }
+
+  .programs__swiper .swiper-text {
+    --nb-r: 12px;
+    --nb-w: 102px;
+    --nb-h: 15px;
+  }
+
+  .programs__swiper h3 {
+    font-size: 24px;
+    line-height: 17px;
+  }
+
+  .programs__swiper p {
+    padding: 20.5px 70px 22.5px 18px;
+    line-height: 18px;
+  }
+
+  .swiper-slide--internship p {
+    padding: 11.5px 70px 14.5px 18px;
+  }
+
+  .programs__swiper a {
+    right: 69px;
+    bottom: 43px;
+  }
+
+  .programs__swiper .swiper-scrollbar {
+    bottom: 10px;
+    width: calc(100% - 103px);
+  }
+
+  .programs__swiper .swiper-scrollbar-drag {
+    opacity: 1;
+    visibility: visible;
+    min-width: 40px;
+  }
 }
 

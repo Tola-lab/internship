@@ -12,3 +12,17 @@
   width: 52px;
   height: 52px;
 }
+
+@media (min-width: $tablet-width) {
+  .header {
+    padding: 30px 45px;
+    width: 768px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .header {
+    padding: 30px 100px;
+    width: 1440px;
+  }
+}

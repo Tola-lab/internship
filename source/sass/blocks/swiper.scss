@@ -22,11 +22,17 @@
   border-radius: 12px;
 }
 
+.swiper-text {
+  background-color: $base-white-color;
+  border-radius: 14px;
+  z-index: 1;
+}
+
 .swiper-header {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 15px 10px;
+  gap: 12px 0;
   margin-bottom: 25px;
 }
 
@@ -88,4 +94,57 @@
 .swiper-button--deactivated::after {
   background-color: $disabled-color;
   cursor: default;
+}
+
+@media (min-width: $tablet-width) {
+  .swiper-header {
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+
+  .swiper-header img {
+    display: block;
+    height: 90px;
+  }
+
+  .swiper-header p {
+    margin: 0;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .swiper-content h3 {
+    margin-bottom: 25px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .swiper-content p {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .swiper-slide--global .hero__button {
+    bottom: 79px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .swiper-header p {
+    font-size: 18px;
+  }
+
+  .swiper-content h3 {
+    font-size: 24px;
+    line-height: 26px;
+  }
+
+  .swiper-content p {
+    line-height: 26px;
+  }
+
+  .swiper-slide--global .hero__button {
+    bottom: 45px;
+    right: 244px;
+  }
 }

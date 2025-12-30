@@ -1,6 +1,6 @@
 .form {
   position: relative;
-  padding: 40px 0;
+  padding: 43px 0 40px;
 }
 
 .form::before {
@@ -72,7 +72,7 @@ form textarea {
 
 form .form__checkbox {
   position: relative;
-  margin-top: 8px;
+  margin-top: 16px;
   margin-bottom: 20px;
   color: $base-white-color;
   opacity: 1;
@@ -82,11 +82,13 @@ form .form__checkbox {
 .form__text-checkbox {
   display: block;
   padding-left: 30px;
+  font-size: 12px;
+  line-height: 14px;
 }
 
 .form__mark {
   position: absolute;
-  top: 0;
+  top: 11px;
   left: 0;
   width: 20px;
   height: 20px;
@@ -109,6 +111,7 @@ form .form__checkbox {
 
 .form__button {
   position: relative;
+  width: 260px;
   font-size: 12px;
   line-height: 12px;
   letter-spacing: 0.24px;
@@ -127,4 +130,123 @@ form .form__checkbox {
 
 .form__button::after {
   background-color: $extra-background-color;
+}
+
+@media (min-width: $tablet-width) {
+  .form {
+    padding: 50px 58px;
+  }
+
+  .form::before {
+    top: 50px;
+    left: 58px;
+    width: 652px;
+    height: 780px;
+    border-radius: 16px;
+  }
+
+  .form__wrapper {
+    padding: 0;
+    padding-right: 210px;
+  }
+
+  form {
+    padding: 30px 40px;
+    width: 442px;
+    min-height: 780px;
+  }
+
+  .form__title {
+    margin-bottom: 20px;
+    padding: 11px 8px 11px 0;
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  .form__subtitle {
+    margin-bottom: 40px;
+    font-size: 16px;
+  }
+
+  form label {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  form textarea {
+    min-height: 88px;
+  }
+
+  form .form__checkbox {
+    margin-bottom: 40px;
+  }
+
+  .form__text-checkbox {
+    padding: 4px 0 3px 30px;
+    line-height: 12px;
+  }
+
+  .form__button {
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 0.28px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form {
+    padding: 60px 100px;
+  }
+
+  .form::before {
+    top: 60px;
+    left: 100px;
+    width: 1240px;
+    height: 800px;
+  }
+
+  .form__wrapper {
+    padding-right: 750px;
+  }
+
+  form {
+    margin: 0;
+    padding: 30px 70px 40px;
+    width: 490px;
+    min-height: 780px;
+  }
+
+  .form__title {
+    padding: 14px 0;
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  .form__subtitle {
+    line-height: 26px;
+  }
+
+  form label {
+    line-height: 18px;
+  }
+
+  form textarea {
+    min-height: 90px;
+  }
+
+  form .form__checkbox {
+    margin-bottom: 36px;
+  }
+
+  .form__text-checkbox {
+    padding: 4px 0 4px 30px;
+  }
+
+  .form__text-checkbox br {
+    display: none;
+  }
+
+  .form__mark {
+    top: 0;
+  }
 }

@@ -2,7 +2,9 @@
   position: relative;
   display: inline-block;
   padding: 15px 68px 15px 30px;
-  box-sizing: border-box;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 0.24px;
   color: $extra-background-color;
   background-color: $base-white-color;
   text-align: center;
@@ -10,6 +12,7 @@
   border: 1px solid $extra-background-color;
   border-radius: 30px;
   text-transform: uppercase;
+  box-sizing: border-box;
   cursor: pointer;
   transition: all 0.6s;
 }
@@ -39,4 +42,24 @@
   mask-size: 10px 10px;
   mask-position: center;
   mask-repeat: no-repeat;
+}
+
+@media (min-width: $tablet-width) {
+  .button {
+    padding: 20px 80px 20px 30px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 0.28px;
+  }
+
+  .button::before {
+    width: 46px;
+    height: 46px;
+  }
+
+  .button::after {
+    top: 22px;
+    right: 22px;
+  }
 }

@@ -1,14 +1,18 @@
 .instructions__title {
   margin: 0;
-  margin-bottom: 15px;
-  padding: 10px 10px 10px 0;
+  margin-bottom: 17px;
+  padding: 8px 10px 10px 0;
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
 }
 
 .instructions__list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
   margin: 0;
+  margin-left: 15px;
   padding: 0;
   list-style: none;
   counter-reset: numbers;
@@ -17,6 +21,7 @@
 .instructions__item {
   position: relative;
   margin: 0;
+  padding: 24px 25px;
   border: 1px solid #f0efe9;
   border-radius: 16px;
   counter-increment: numbers;
@@ -30,7 +35,7 @@
   justify-content: center;
   width: 32px;
   height: 32px;
-  top: -11px;
+  top: -5px;
   left: -16px;
   font-weight: 500;
   font-size: 18px;
@@ -38,12 +43,65 @@
   background-color: $extra-background-color;
 }
 
-.instructions__item:not(:last-child) {
-  margin-bottom: 10px;
-}
-
 .instructions__item p {
   margin: 0;
-  padding: 24px 25px;
+}
+
+@media (min-width: $tablet-width) {
+  .instructions__title {
+    margin-bottom: 31px;
+    padding: 6px 10px 14px 0;
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  .instructions__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 25px 48px;
+    margin: 0;
+    margin-left: 20px;
+  }
+
+  .instructions__item {
+    padding: 30px 25px;
+    width: 305px;
+  }
+
+  .instructions__item::before {
+    width: 42px;
+    height: 42px;
+    top: -17px;
+    left: -21px;
+    font-size: 22px;
+    line-height: 22px;
+    letter-spacing: 0.22px;
+  }
+
+  .instructions__item p {
+    font-size: 16px;
+    color: $base-background-color;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .instructions__title {
+    margin-bottom: 45px;
+    padding: 10px 120px 10px 0;
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  .instructions__list {
+    gap: 23px;
+  }
+
+  .instructions__item {
+    width: 478px;
+  }
+
+  .instructions__item p {
+    line-height: 26px;
+  }
 }
 

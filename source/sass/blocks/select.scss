@@ -70,3 +70,15 @@
 .select__input:checked ~ .select__options {
   display: block;
 }
+
+@media (min-width: $tablet-width) {
+  .select {
+    width: 362px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .select {
+    width: 350px;
+  }
+}

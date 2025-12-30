@@ -54,3 +54,13 @@
   top: 6px;
   right: 0;
 }
+
+@media (min-width: $tablet-width) {
+  .navigation__toggle {
+    padding: 20px 70px 20px 20px;
+  }
+
+  .navigation__toggle::after {
+    top: 4px;
+  }
+}

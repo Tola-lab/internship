@@ -29,11 +29,28 @@
 .hero__swiper .swiper-slide {
   padding: 74px 15px 20px;
   min-height: 568px;
+  border-radius: 0;
+}
+
+.hero__swiper .swiper-slide::before {
+  border-radius: 0;
+}
+
+.hero__swiper .swiper-nebo-tr {
+  --nb-r: 14px;
+  --nb-w: 182px;
+  --nb-h: 0px;
+}
+
+.hero__swiper .swiper-text {
+  --nb-r: 14px;
+  --nb-w: 78px;
+  --nb-h: 37px;
 }
 
 .hero__swiper h2 {
   margin: 0;
-  padding: 20px 15px 16px 14px;
+  padding: 48px 15px 16px 14px;
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
@@ -47,11 +64,189 @@
   color: $base-black-color;
 }
 
+.hero__swiper .swiper-pagination {
+  position: absolute;
+  display: flex;
+  gap: 12px;
+  top: 211px;
+  left: 31px;
+  width: 48px;
+  height: 8px;
+  z-index: 2;
+  transition: all 0.6s;
+}
+
+.hero__swiper .swiper-pagination-bullet {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border: 2px solid $extra-background-color;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.hero__swiper .swiper-pagination-bullet-active {
+  background-color: $extra-background-color;
+}
+
 .hero__button {
   margin-left: 15px;
+  margin-bottom: 10px;
   padding: 15px 59px 15px 21px;
   max-width: 250px;
-  font-size: 12px;
-  line-height: 12px;
-  letter-spacing: 0.24px;
+}
+
+@media (min-width: $tablet-width) {
+  .hero__swiper .swiper-slide--global {
+    background-image: url("../../img/global-hero-tablet@1x.jpg");
+
+    @media (resolution >= 2dppx) {
+      background-image: url("../../img/global-hero-tablet@2x.jpg");
+    }
+  }
+
+  .hero__swiper .swiper-slide--volunteer {
+    background-image: url("../../img/volunteer-hero-tablet@1x.jpg");
+
+    @media (resolution >= 2dppx) {
+      background-image: url("../../img/volunteer-hero-tablet@2x.jpg");
+    }
+  }
+
+  .hero__swiper .swiper-slide--program {
+    background-image: url("../../img/program-hero-desktop@1x.jpg");
+    background-position: 70% 0;
+
+    @media (resolution >= 2dppx) {
+      background-image: url("../../img/program-hero-desktop@2x.jpg");
+    }
+  }
+
+  .hero__swiper .swiper-slide {
+    padding: 86px 64px 60px 45px;
+    min-height: 1024px;
+  }
+
+  .hero__swiper .swiper-nebo-tr {
+    --nb-r: 20px;
+    --nb-w: 520px;
+    --nb-h: 0px;
+  }
+
+  .hero__swiper .swiper-text {
+    position: relative;
+    border-radius: 20px 20px 30px 30px;
+
+    --nb-r: 20px;
+    --nb-w: 26px;
+    --nb-h: 98px;
+  }
+
+  .hero__swiper h2 {
+    padding: 70px 69px 24px 40px;
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  .hero__swiper p {
+    margin: 0;
+    padding: 0 351px 35px 40px;
+  }
+
+  .hero__swiper .swiper-pagination {
+    top: 661px;
+    left: 65px;
+    width: 60px;
+    height: 12px;
+  }
+
+  .hero__swiper .swiper-pagination-bullet {
+    display: block;
+    width: 12px;
+    height: 12px;
+  }
+
+  .hero__button {
+    position: absolute;
+    margin: 0;
+    padding: 20px 80px 20px 30px;
+    bottom: 41px;
+    right: 105px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .hero__swiper .swiper-slide--global {
+    background-image: url("../../img/global-hero-desktop@1x.jpg");
+
+    @media (resolution >= 2dppx) {
+      background-image: url("../../img/global-hero-desktop@2x.jpg");
+    }
+  }
+
+  .hero__swiper .swiper-slide--volunteer {
+    background-image: url("../../img/volunteer-hero-desktop@1x.jpg");
+
+    @media (resolution >= 2dppx) {
+      background-image: url("../../img/volunteer-hero-desktop@2x.jpg");
+    }
+  }
+
+  .hero__swiper .swiper-slide--program {
+    background-image: url("../../img/program-hero-desktop@1x.jpg");
+    background-position: center;
+
+    @media (resolution >= 2dppx) {
+      background-image: url("../../img/program-hero-desktop@2x.jpg");
+    }
+  }
+
+  .hero__swiper .swiper-slide {
+    padding: 116px 372px 60px 100px;
+    min-height: 800px;
+  }
+
+  .hero__swiper .swiper-nebo-tr {
+    --nb-r: 20px;
+    --nb-w: 828px;
+    --nb-h: 0px;
+  }
+
+  .hero__swiper .swiper-text {
+    border-radius: 20px 20px 30px 30px;
+
+    --nb-r: 22px;
+    --nb-w: 151px;
+    --nb-h: 70px;
+  }
+
+  .hero__swiper h2 {
+    padding: 80px 50px 30px;
+    font-size: 54px;
+    line-height: 62px;
+  }
+
+  .hero__swiper p {
+    padding: 0 460px 35px 50px;
+    line-height: 26px;
+  }
+
+  .hero__swiper .swiper-pagination {
+    top: 407px;
+    left: 120px;
+  }
+
+  .hero__swiper .swiper-pagination-bullet {
+    display: block;
+    width: 12px;
+    height: 12px;
+  }
+
+  .hero__button {
+    position: absolute;
+    margin: 0;
+    padding: 20px 80px 20px 30px;
+    bottom: 35px;
+    right: 225px;
+  }
 }
