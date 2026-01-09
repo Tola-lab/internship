@@ -13,11 +13,12 @@
 
 .reviews .swiper-button {
   position: absolute;
-  top: 54px;
-  right: 15px;
+  top: 75px;
+  right: 16px;
 }
 
 .reviews .swiper-button-prev {
+  left: auto;
   right: 45px;
 }
 
@@ -31,10 +32,15 @@
   content: none;
 }
 
+.reviews__swiper .swiper-scrollbar {
+  display: none;
+}
+
 @media (min-width: $tablet-width) {
   .reviews__wrapper {
+    position: relative;
     margin-right: -45px;
-    padding: 50px 45px 112px;
+    padding: 50px 45px 60px;
   }
 
   .reviews .swiper-button {
@@ -47,17 +53,43 @@
     right: 122px;
   }
 
+  .reviews__swiper .swiper-wrapper {
+    margin-bottom: 52px;
+  }
+
   .reviews__swiper .swiper-slide {
     margin-right: 15px;
     padding: 50px;
     width: 560px;
+  }
+
+  .reviews__swiper .swiper-scrollbar {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    width: calc(100% - 161px);
+    height: 2px;
+    background: rgb($extra-background-color, 0.2);
+    border-radius: 2px;
+  }
+
+  .reviews__swiper .swiper-scrollbar-drag {
+    height: 2px;
+    background: $extra-background-color;
+    border-radius: 2px;
+    cursor: grab;
+  }
+
+  .reviews__swiper .swiper-scrollbar-drag:active {
+    cursor: grabbing;
   }
 }
 
 @media (min-width: $desktop-width) {
   .reviews__wrapper {
     margin: 0;
-    padding: 60px 100px 122px;
+    padding: 60px 100px;
   }
 
   .reviews .swiper-button {
@@ -71,6 +103,10 @@
     left: auto;
   }
 
+  .reviews__swiper .swiper-wrapper {
+    margin-bottom: 64px;
+  }
+
   .reviews__swiper .swiper-slide {
     display: flex;
     flex-direction: column;
@@ -78,5 +114,16 @@
     padding: 50px 48px 50px 52px;
     width: 604px;
     min-height: 483px;
+  }
+
+  .reviews__swiper .swiper-scrollbar {
+    bottom: 10px;
+    width: calc(100% - 103px);
+  }
+
+  .reviews__swiper .swiper-scrollbar-drag {
+    opacity: 1;
+    visibility: visible;
+    min-width: 40px;
   }
 }

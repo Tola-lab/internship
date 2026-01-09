@@ -9,9 +9,13 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
   <link rel="stylesheet" href="sass/vendor/nebo.scss">
   <link rel="stylesheet" href="sass/style.scss">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
-<body class="page-body">
+<body class="page__body">
   <header class="header">
     <a class="header__logo" href="#">
       <img src="img/logotype.svg" width="52" height="52" alt="Internship">
@@ -26,14 +30,21 @@
         <li class="navigation__item">
           <a class="navigation__link" href="#">О проекте</a>
         </li>
-        <li class="navigation__item select">
-          <label class="select__label" for="select-programs">Программы</label>
-          <input type="checkbox" id="select-programs" name="programs">
-          <ul class="select__options">
-            <li class="select__item">Стажировки</li>
-            <li class="select__item">Волонтёрство</li>
-            <li class="select__item">Учёба</li>
-            <li class="select__item">Религия</li>
+        <li class="navigation__item">
+          <button class="navigation__select-button" type="button">Программы</button>
+          <ul class="navigation__options-list">
+            <li class="navigation__item">
+              <a class="navigation__link navigation__link--option" href="#">Стажировки</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link navigation__link--option" href="#">Волонтёрство</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link navigation__link--option" href="#">Учёба</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link navigation__link--option" href="#">Религия</a>
+            </li>
           </ul>
         </li>
         <li class="navigation__item">
@@ -43,13 +54,20 @@
           <a class="navigation__link" href="#">Отзывы</a>
         </li>
         <li class="navigation__item">
-          <label class="select__label" for="select-news">Новости</label>
-          <input type="checkbox" id="select-news" name="news">
-          <ul class="select__options">
-            <li class="select__item">Стажировки</li>
-            <li class="select__item">Волонтёрство</li>
-            <li class="select__item">Учёба</li>
-            <li class="select__item">Религия</li>
+          <button class="navigation__select-button" type="button">Новости</button>
+          <ul class="navigation__options-list">
+            <li class="navigation__item">
+              <a class="navigation__link navigation__link--option" href="#">Стажировки</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link navigation__link--option" href="#">Волонтёрство</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link navigation__link--option" href="#">Учёба</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link navigation__link--option" href="#">Религия</a>
+            </li>
           </ul>
         </li>
         <li class="navigation__item">
@@ -67,28 +85,34 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide swiper-slide--global">
             <div class="swiper-nebo-tr nebo nebo--tr">
-              <div class="swiper-text nebo">
-                <h2>Глобальный профессиональный опыт обучения за рубежом</h2>
-                <p>Погрузитесь в академическую программу, проходя практику в разных городах, ощущая настоящий студенческий стиль жизни!</p>
-                <a class="hero__button button" href="#">Подробнее</a>
+              <div class="swiper-nebo-br nebo nebo--br">
+                <div class="swiper-text nebo">
+                  <h2>Глобальный профессиональный опыт обучения за рубежом</h2>
+                  <p>Погрузитесь в академическую программу, проходя практику в разных городах, ощущая настоящий студенческий стиль жизни!</p>
+                  <a class="hero__button button" href="#">Подробнее</a>
+                </div>
               </div>
             </div>
           </div>
           <div class="swiper-slide swiper-slide--volunteer">
             <div class="swiper-nebo-tr nebo nebo--tr">
-              <div class="swiper-text nebo">
-                <h2>Волонтёрские программы — внесите свой вклад в общество</h2>
-                <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и другое.</p>
-                <a class="hero__button button" href="#">Подробнее</a>
+              <div class="swiper-nebo-br nebo nebo--br">
+                <div class="swiper-text nebo">
+                  <h2>Волонтёрские программы — внесите свой вклад в общество</h2>
+                  <p>Возможности для преподавания, органического сельского хозяйства, устойчивого образа жизни и другое.</p>
+                  <a class="hero__button button" href="#">Подробнее</a>
+                </div>
               </div>
             </div>
           </div>
           <div class="swiper-slide swiper-slide--program">
             <div class="swiper-nebo-tr nebo nebo--tr">
-              <div class="swiper-text nebo">
-                <h2>Программы стажировок в крупнейших компаниях мира</h2>
-                <p>Получите незаменимый опыт работы в ведущих мировых компаниях и государственных организациях.</p>
-                <a class="hero__button button" href="#">Подробнее</a>
+              <div class="swiper-nebo-br nebo nebo--br">
+                <div class="swiper-text nebo">
+                  <h2>Программы стажировок в крупнейших компаниях мира</h2>
+                  <p>Получите незаменимый опыт работы в ведущих мировых компаниях и государственных организациях.</p>
+                  <a class="hero__button button" href="#">Подробнее</a>
+                </div>
               </div>
             </div>
           </div>
@@ -313,9 +337,29 @@
               </a>
             </div>
           </div>
+          <div class="swiper-slide swiper-slide--career">
+            <div class="swiper-text">
+              <span>10/03/2023</span>
+              <h3>Построй свою карьеру</h3>
+              <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
+              <a href="#">
+                <span class="visually-hidden">Подробнее</span>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-slide--career">
+            <div class="swiper-text">
+              <span>10/03/2023</span>
+              <h3>Построй свою карьеру</h3>
+              <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
+              <a href="#">
+                <span class="visually-hidden">Подробнее</span>
+              </a>
+            </div>
+          </div>
         </div>
+        <div class="swiper-pagination"></div>
       </div>
-      <div class="swiper-pagination"></div>
       <button class="swiper-button swiper-button-prev swiper-button--deactivated" type="button">
         <span class="visually-hidden">Предыдущий слайд</span>
       </button>

@@ -5,11 +5,12 @@
 
 .programs .swiper-button {
   position: absolute;
-  top: 54px;
-  right: 15px;
+  top: 75px;
+  right: 16px;
 }
 
 .programs .swiper-button-prev {
+  left: auto;
   right: 45px;
 }
 
@@ -107,6 +108,10 @@
   mask-repeat: no-repeat;
 }
 
+.programs__swiper .swiper-scrollbar {
+  display: none;
+}
+
 @media (min-width: $tablet-width) {
   .programs .swiper-button {
     position: absolute;
@@ -186,6 +191,7 @@
 
   .programs__swiper .swiper-scrollbar {
     position: absolute;
+    display: block;
     bottom: 0;
     left: 0;
     width: calc(100% - 161px);

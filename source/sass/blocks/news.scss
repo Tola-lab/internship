@@ -1,12 +1,12 @@
 .news {
   position: relative;
-  padding: 50px 15px 100px;
+  padding: 50px 15px;
 }
 
 .news .swiper-button {
   position: absolute;
   top: auto;
-  bottom: 50px;
+  bottom: 52px;
   right: 15px;
 }
 
@@ -33,6 +33,11 @@
 }
 
 .news__swiper {
+  position: relative;
+  padding-bottom: 50px;
+}
+
+.news__swiper .swiper-wrapper {
   height: 590px;
 }
 
@@ -51,7 +56,6 @@
 }
 
 .news__swiper .swiper-slide--interview {
-  height: 330px;
   background-image: url("../../img/interview-news@1x.jpg");
 
   @media (resolution >= 2dppx) {
@@ -60,8 +64,6 @@
 }
 
 .news__swiper .swiper-slide--travel {
-  margin-top: 20px;
-  height: 240px;
   background-image: url("../../img/travel-news@1x.jpg");
 
   @media (resolution >= 2dppx) {
@@ -121,7 +123,7 @@
   position: absolute;
   padding: 0;
   right: 37px;
-  bottom: 16px;
+  bottom: 10px;
   width: 30px;
   height: 30px;
   background-color: $extra-background-color;
@@ -141,6 +143,31 @@
   mask-size: 10px 10px;
   mask-position: center;
   mask-repeat: no-repeat;
+}
+
+.news__swiper .swiper-pagination {
+  position: absolute;
+  display: flex;
+  gap: 8px;
+  top: auto;
+  left: 66px;
+  bottom: 0;
+  width: 152px;
+}
+
+.news__swiper .swiper-pagination-bullet {
+  padding: 6px 9px;
+  width: 26px;
+  height: 26px;
+  font-size: 14px;
+  line-height: 14px;
+  color: $extra-background-color;
+  background-color: transparent;
+}
+
+.news__swiper .swiper-pagination-bullet-active {
+  color: $base-white-color;
+  background-color: $extra-background-color;
 }
 
 @media (min-width: $tablet-width) {

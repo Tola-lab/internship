@@ -1,5 +1,22 @@
 .page__body {
+  position: relative;
   margin: 0;
   padding: 0;
   min-width: 320px;
+}
+
+.page__body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgb(0, 0, 0, 0.6);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  z-index: 2;
+}
+
+.page__body.page__body--overlay::before {
+  opacity: 0.6;
+  pointer-events: auto;
 }

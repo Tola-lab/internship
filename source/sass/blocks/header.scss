@@ -2,8 +2,9 @@
   position: absolute;
   display: flex;
   justify-content: space-between;
+  right: 0;
+  left: 0;
   padding: 20px 15px;
-  width: 320px;
   z-index: 2;
 }
 
@@ -16,13 +17,11 @@
 @media (min-width: $tablet-width) {
   .header {
     padding: 30px 45px;
-    width: 768px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .header {
     padding: 30px 100px;
-    width: 1440px;
   }
 }
