@@ -1,7 +1,7 @@
 .instructions__title {
   margin: 0;
-  margin-bottom: 17px;
-  padding: 8px 10px 10px 0;
+  margin-bottom: 20px;
+  padding: 6px 10px 10px 0;
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
@@ -21,7 +21,7 @@
 .instructions__item {
   position: relative;
   margin: 0;
-  padding: 24px 25px;
+  padding: 23px 25px 25px;
   border: 1px solid #f0efe9;
   border-radius: 16px;
   counter-increment: numbers;
@@ -33,10 +33,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  width: 27px;
+  height: 30px;
   top: -5px;
-  left: -16px;
+  left: -14px;
   font-weight: 500;
   font-size: 18px;
   line-height: 18px;
@@ -45,6 +45,7 @@
 
 .instructions__item p {
   margin: 0;
+  color: $base-background-color;
 }
 
 @media (min-width: $tablet-width) {
@@ -64,7 +65,7 @@
   }
 
   .instructions__item {
-    padding: 30px 25px;
+    padding: 29px 25px 31px;
     width: 305px;
   }
 
@@ -104,4 +105,3 @@
     line-height: 26px;
   }
 }
-

@@ -115,6 +115,10 @@
     --nb-h: 0px;
   }
 
+  .hero__swiper .swiper-nebo-br {
+    --nb-w: 35px;
+  }
+
   .hero__swiper .swiper-text {
     position: relative;
     border-radius: 20px 20px 30px 30px;
@@ -133,19 +137,6 @@
   .hero__swiper p {
     margin: 0;
     padding: 0 351px 35px 40px;
-  }
-
-  .hero__swiper .swiper-pagination {
-    top: 661px;
-    left: 65px;
-    width: 60px;
-    height: 12px;
-  }
-
-  .hero__swiper .swiper-pagination-bullet {
-    display: block;
-    width: 12px;
-    height: 12px;
   }
 
   .hero__button {
@@ -211,17 +202,6 @@
   .hero__swiper p {
     padding: 0 460px 35px 50px;
     line-height: 26px;
-  }
-
-  .hero__swiper .swiper-pagination {
-    top: 407px;
-    left: 120px;
-  }
-
-  .hero__swiper .swiper-pagination-bullet {
-    display: block;
-    width: 12px;
-    height: 12px;
   }
 
   .hero__button {

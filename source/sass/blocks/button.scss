@@ -27,6 +27,7 @@
   height: 34px;
   background-color: $extra-background-color;
   border-radius: 50%;
+  transition: all 0.6s;
 }
 
 .button::after {
@@ -42,6 +43,57 @@
   mask-size: 10px 10px;
   mask-position: center;
   mask-repeat: no-repeat;
+  transition: all 0.6s;
+}
+
+.button:hover {
+  color: $base-white-color;
+  background-color: $extra-background-color;
+}
+
+.button:hover::before {
+  background-color: $base-white-color;
+}
+
+.button:hover::after {
+  background-color: $extra-background-color;
+  transform: rotate(45deg);
+}
+
+.button:active {
+  color: rgb($base-white-color, 0.7);
+}
+
+.button:active::after {
+  background-color: rgb($extra-background-color, 0.7);
+}
+
+.button--disabled {
+  color: $disabled-color;
+  background-color: transparent;
+  border: 1px solid $disabled-color;
+  cursor: default;
+}
+
+.button--disabled:hover,
+.button--disabled:active {
+  color: $disabled-color;
+  background-color: transparent;
+}
+
+.button--disabled.button::before {
+  background-color: $disabled-color;
+}
+
+.button--disabled.button:hover::before,
+.button--disabled.button:active::before {
+  background-color: $disabled-color;
+}
+
+.button--disabled.button:hover::after,
+.button--disabled.button:active::after {
+  background-color: rgb($base-white-color, 0.9);
+  transform: rotate(0deg);
 }
 
 @media (min-width: $tablet-width) {

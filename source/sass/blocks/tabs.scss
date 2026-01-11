@@ -13,6 +13,19 @@
   cursor: pointer;
 }
 
+.tabs__button:hover {
+  opacity: 1;
+}
+
+.tabs__button:focus {
+  outline: none;
+}
+
+.tabs__button:focus-visible {
+  background-color: $base-white-color;
+  border-radius: 20px;
+}
+
 .tabs__button--active {
   padding: 10px 14px;
   border: 2px solid $extra-background-color;

@@ -5,7 +5,7 @@
 
 .programs .swiper-button {
   position: absolute;
-  top: 75px;
+  top: 76px;
   right: 16px;
 }
 
@@ -19,7 +19,7 @@
 }
 
 .programs__title {
-  padding: 5px 4px 5px 0;
+  padding: 6px 4px 4px 0;
 }
 
 .programs__button {
@@ -80,6 +80,7 @@
   padding: 12px 77px 15px 18px;
   font-size: 12px;
   line-height: 14px;
+  opacity: 0.8;
 }
 
 .programs__swiper a {
@@ -106,6 +107,23 @@
   mask-size: 10px 10px;
   mask-position: center;
   mask-repeat: no-repeat;
+  transition: all 0.6s;
+}
+
+.programs__swiper a:hover::before {
+  transform: rotate(45deg);
+}
+
+.programs__swiper a:active::before {
+  background-color: rgb($base-white-color, 0.7);
+}
+
+.programs__swiper a:focus {
+  outline: none;
+}
+
+.programs__swiper a:focus-visible {
+  transform: rotate(45deg);
 }
 
 .programs__swiper .swiper-scrollbar {
@@ -133,7 +151,7 @@
 
   .programs__title {
     margin-bottom: 40px;
-    padding: 3px 3px 3px 0;
+    padding: 4px 3px 3px 0;
   }
 
   .programs__button {
@@ -258,10 +276,11 @@
   .programs__swiper .swiper-text {
     --nb-r: 12px;
     --nb-w: 102px;
-    --nb-h: 15px;
+    --nb-h: 17px;
   }
 
   .programs__swiper h3 {
+    padding-top: 18px;
     font-size: 24px;
     line-height: 17px;
   }
@@ -272,7 +291,7 @@
   }
 
   .swiper-slide--internship p {
-    padding: 11.5px 70px 14.5px 18px;
+    padding: 12.5px 70px 14.5px 18px;
   }
 
   .programs__swiper a {
@@ -291,4 +310,3 @@
     min-width: 40px;
   }
 }
-

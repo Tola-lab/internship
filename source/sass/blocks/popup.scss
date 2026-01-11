@@ -1,0 +1,242 @@
+.popup {
+  display: none;
+}
+
+.popup--open {
+  position: absolute;
+  display: block;
+  padding: 0 15px;
+  top: 22px;
+  left: 0;
+  right: 0;
+  z-index: 4;
+}
+
+.popup__wrapper {
+  position: relative;
+  padding: 40px 15px;
+  background-color: $base-white-color;
+  border-radius: 16px;
+}
+
+.popup__button-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 20px;
+  height: 20px;
+  background:
+    linear-gradient($extra-background-color, $extra-background-color) center / 16px 1px no-repeat,
+    linear-gradient($extra-background-color, $extra-background-color) center / 1px 16px no-repeat;
+  border: none;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+
+.popup__title {
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
+}
+
+.popup__subtitle {
+  margin: 0;
+  margin-bottom: 25px;
+  padding: 0 25px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.popup__form {
+  margin: 0;
+  padding: 0;
+  width: auto;
+  min-height: 338px;
+  color: $base-black-color;
+  background-color: transparent;
+}
+
+.popup__fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.popup__label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  line-height: 14px;
+  color: $base-black-color;
+  opacity: 0.8;
+}
+
+.popup__input {
+  margin-bottom: 15px;
+  padding: 13px 10px;
+  width: 100%;
+  color: $base-black-color;
+  background-color: transparent;
+  border: 1px solid rgb($base-black-color, 0.3);
+  border-radius: 8px;
+  transition: all 0.6s;
+}
+
+.popup__input:hover {
+  border: 1px solid rgb($base-black-color, 1);
+}
+
+.popup__input:focus {
+  border: 1px solid rgb($base-black-color, 1);
+  outline: none;
+}
+
+.popup__input:disabled {
+  background-color: rgb($disabled-color, 0.2);
+  border: 1px solid rgb($disabled-color, 0.5);
+  pointer-events: none;
+}
+
+.popup__form--error .popup__input:invalid {
+  background-color: rgb(255, 94, 102, 0.2);
+  border: 1px solid #ff5e66;
+}
+
+.popup__form .popup__checkbox {
+  position: relative;
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  color: $base-black-color;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.popup__text-checkbox {
+  display: block;
+  padding-left: 30px;
+  font-size: 12px;
+  line-height: 14px;
+  transition: all 0.6s;
+}
+
+.popup__mark {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: $extra-background-color;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  transition: all 0.6s;
+}
+
+.popup__input[type="checkbox"]:checked + .popup__mark::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 18px;
+  height: 19px;
+  background-color: $base-white-color;
+  mask-image: url("../../../__spritemap#sprite-check-view");
+  mask-size: 10px 10px;
+  mask-position: center;
+  mask-repeat: no-repeat;
+}
+
+.popup__button {
+  padding: 15px 68px 15px 30px;
+  width: 100%;
+  text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .popup--open {
+    padding: 0;
+    left: 50%;
+    right: auto;
+    top: 204px;
+    transform: translateX(-50%);
+  }
+
+  .popup__wrapper {
+    padding: 57px 80px 60px;
+    width: 510px;
+  }
+
+  .popup__button-close {
+    top: 30px;
+    right: 30px;
+    width: 22px;
+    height: 22px;
+    background:
+      linear-gradient($extra-background-color, $extra-background-color) center / 22px 1px no-repeat,
+      linear-gradient($extra-background-color, $extra-background-color) center / 1px 22px no-repeat;
+  }
+
+  .popup__title {
+    margin-bottom: 15px;
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  .popup__subtitle {
+    margin-bottom: 30px;
+    padding: 0;
+    font-size: 16px;
+  }
+
+  .popup__label {
+    margin-bottom: 12px;
+    line-height: 20px;
+  }
+
+  .popup__input {
+    margin-bottom: 20px;
+    padding: 16px 10px;
+    width: 350px;
+  }
+
+  .popup__form .popup__checkbox {
+    margin-top: 23px;
+    margin-bottom: 32px;
+  }
+
+  .popup__mark {
+    top: -3px;
+  }
+
+  .popup__button {
+    display: block;
+    margin: 0 auto;
+    padding: 20px 78px 20px 30px;
+    width: 194px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .popup--open {
+    top: 90px;
+  }
+
+  .popup__wrapper {
+    padding-top: 54px;
+  }
+
+  .popup__title {
+    margin-bottom: 13px;
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  .popup__subtitle {
+    line-height: 26px;
+  }
+
+  .popup__label {
+    margin-bottom: 12px;
+    line-height: 18px;
+  }
+}

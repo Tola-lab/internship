@@ -5,6 +5,19 @@
   background-color: $extra-background-color;
   border-radius: 50%;
   cursor: pointer;
+  transition: all 0.6s;
+}
+
+.social__link:active {
+  background-color: $active-push-color;
+}
+
+.social__link:focus {
+  outline: none;
+}
+
+.social__link:focus-visible {
+  background-color: $base-white-color;
 }
 
 .social__link::after {
@@ -30,6 +43,19 @@
 
 .social__link--reddit::after {
   mask-image: url("../../../__spritemap#sprite-reddit-view");
+}
+
+.social__link:hover::after {
+  opacity: 0.7;
+}
+
+.social__link:active::after {
+  background-color: $base-white-color;
+  opacity: 1;
+}
+
+.social__link:focus-visible::after {
+  background-color: $extra-background-color;
 }
 
 @media (min-width: $tablet-width) {

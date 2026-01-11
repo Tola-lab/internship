@@ -16,6 +16,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
+  pointer-events: none;
 }
 
 .form__wrapper {
@@ -47,6 +48,14 @@ form {
   color: $base-background-color;
 }
 
+.form__fieldset {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
 form label {
   margin-bottom: 12px;
   font-size: 12px;
@@ -63,6 +72,29 @@ form textarea {
   background-color: transparent;
   border: 1px solid rgb($base-white-color, 0.3);
   border-radius: 8px;
+  transition: all 0.6s;
+}
+
+form input:hover,
+form textarea:hover {
+  border: 1px solid rgb($base-white-color, 1);
+}
+
+form input:focus,
+form textarea:focus {
+  border: 1px solid rgb($base-white-color, 1);
+  outline: none;
+}
+
+.form input:disabled {
+  background-color: #4179c7;
+  border: 1px solid #83a7da;
+  pointer-events: none;
+}
+
+.form--error .form__input:invalid {
+  background-color: rgb(255, 94, 102, 0.2);
+  border: 1px solid #ff5e66;
 }
 
 form textarea {
@@ -84,6 +116,7 @@ form .form__checkbox {
   padding-left: 30px;
   font-size: 12px;
   line-height: 14px;
+  transition: all 0.6s;
 }
 
 .form__mark {
@@ -93,15 +126,17 @@ form .form__checkbox {
   width: 20px;
   height: 20px;
   background-color: $base-white-color;
+  border: 1px solid transparent;
   border-radius: 2px;
+  transition: all 0.6s;
 }
 
 .form__input[type="checkbox"]:checked + .form__mark::before {
   content: "";
   position: absolute;
   display: block;
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 19px;
   background-color: $extra-background-color;
   mask-image: url("../../../__spritemap#sprite-check-view");
   mask-size: 10px 10px;
@@ -118,6 +153,16 @@ form .form__checkbox {
   color: $base-white-color;
   background-color: transparent;
   border: 1px solid $base-white-color;
+  transition: all 0.6s;
+}
+
+.form__button:hover {
+  color: $extra-background-color;
+  background-color: $base-white-color;
+}
+
+.form__button:active {
+  color: rgb($extra-background-color, 0.7);
 }
 
 .form__button::before,
@@ -126,10 +171,30 @@ form .form__checkbox {
   position: absolute;
   display: block;
   background-color: $base-white-color;
+  transition: all 0.6s;
 }
 
 .form__button::after {
   background-color: $extra-background-color;
+}
+
+.form__button:hover::before {
+  background-color: $extra-background-color;
+}
+
+.form__button:hover::after {
+  background-color: $base-white-color;
+}
+
+.form__button:active::after {
+  background-color: rgb($base-white-color, 0.7);
+}
+
+.form__button:disabled {
+  border: solid 1px #a9afb7;
+  background-color: transparent;
+  color: #a9afb7;
+  pointer-events: none;
 }
 
 @media (min-width: $tablet-width) {
@@ -181,12 +246,21 @@ form .form__checkbox {
     margin-bottom: 40px;
   }
 
+  .form__mark {
+    top: 0;
+  }
+
   .form__text-checkbox {
     padding: 4px 0 3px 30px;
     line-height: 12px;
   }
 
+  .form__text-checkbox br {
+    display: none;
+  }
+
   .form__button {
+    width: 352px;
     font-size: 14px;
     line-height: 14px;
     letter-spacing: 0.28px;

@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Pagination, Navigation, Scrollbar, Grid } from 'swiper/modules';
+import { Pagination, Navigation, Scrollbar } from 'swiper/modules';
 
 export const initHeroSwiper = () => new Swiper('.hero__swiper', {
   modules: [Pagination],
@@ -60,7 +60,7 @@ export const initProgramsSwiper = () => new Swiper('.programs__swiper', {
 
 export const initNewsSwiper = () => {
   const newsSwiper = new Swiper('.news__swiper', {
-    modules: [Navigation, Pagination, Grid],
+    modules: [Navigation, Pagination],
     loop: false,
     speed: 600,
 
@@ -73,11 +73,9 @@ export const initNewsSwiper = () => {
     },
 
     slidesPerView: 1,
+    slidesPerGroup: 1,
     spaceBetween: 15,
-
-    grid: {
-      rows: 2
-    },
+    watchSlidesProgress: true,
 
     navigation: {
       nextEl: '.news .swiper-button-next',
@@ -87,15 +85,12 @@ export const initNewsSwiper = () => {
 
     breakpoints: {
       768: {
-        slidesPerView: 2,
+        slidesPerView: 'auto',
         spaceBetween: 30
       },
       1440: {
-        slidesPerView: 3,
+        slidesPerView: 'auto',
         spaceBetween: 32,
-        grid: {
-          rows: 1
-        }
       },
     },
   });
@@ -158,7 +153,7 @@ export const initReviewsSwiper = () => new Swiper('.reviews__swiper', {
     },
     1440: {
       slidesPerView: 'auto',
-      spaceBetween: 30,
+      spaceBetween: 32,
       scrollbar: {
         draggable: true,
         hide: false,

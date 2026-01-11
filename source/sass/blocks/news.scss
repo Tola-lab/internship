@@ -37,7 +37,9 @@
   padding-bottom: 50px;
 }
 
-.news__swiper .swiper-wrapper {
+.news__swiper .swiper-slide {
+  display: flex;
+  gap: 20px;
   height: 590px;
 }
 
@@ -45,17 +47,19 @@
   content: none;
 }
 
-.news__swiper .swiper-slide {
+.news__swiper .swiper-card {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  height: 240px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   border-radius: 14px;
 }
 
-.news__swiper .swiper-slide--interview {
+.news__swiper .swiper-card--interview {
+  height: 330px;
   background-image: url("../../img/interview-news@1x.jpg");
 
   @media (resolution >= 2dppx) {
@@ -63,7 +67,7 @@
   }
 }
 
-.news__swiper .swiper-slide--travel {
+.news__swiper .swiper-card--travel {
   background-image: url("../../img/travel-news@1x.jpg");
 
   @media (resolution >= 2dppx) {
@@ -71,7 +75,8 @@
   }
 }
 
-.news__swiper .swiper-slide--volunteer {
+.news__swiper .swiper-card--volunteer {
+  height: 330px;
   background-image: url("../../img/volunteer-news@1x.jpg");
 
   @media (resolution >= 2dppx) {
@@ -79,7 +84,7 @@
   }
 }
 
-.news__swiper .swiper-slide--career {
+.news__swiper .swiper-card--career {
   background-image: url("../../img/career-news@1x.jpg");
 
   @media (resolution >= 2dppx) {
@@ -98,7 +103,7 @@
 .news__swiper span {
   padding: 12px 12px 6px 0;
   font-size: 12px;
-  line-height: 24px;
+  line-height: 12px;
   letter-spacing: 0.12px;
   color: $extra-background-color;
 }
@@ -143,6 +148,23 @@
   mask-size: 10px 10px;
   mask-position: center;
   mask-repeat: no-repeat;
+  transition: all 0.6s;
+}
+
+.news__swiper a:hover::before {
+  transform: rotate(45deg);
+}
+
+.news__swiper a:active::before {
+  background-color: rgb($base-white-color, 0.7);
+}
+
+.news__swiper a:focus {
+  outline: none;
+}
+
+.news__swiper a:focus-visible {
+  transform: rotate(45deg);
 }
 
 .news__swiper .swiper-pagination {
@@ -156,13 +178,26 @@
 }
 
 .news__swiper .swiper-pagination-bullet {
-  padding: 6px 9px;
+  padding: 4px 7px;
   width: 26px;
   height: 26px;
   font-size: 14px;
   line-height: 14px;
   color: $extra-background-color;
   background-color: transparent;
+  border: 2px solid transparent;
+  transition: all 0.6s;
+}
+
+.news__swiper .swiper-pagination-bullet:hover {
+  border: 2px solid $extra-background-color;
+  opacity: 1;
+}
+
+.news__swiper .swiper-pagination-bullet:active {
+  color: $base-white-color;
+  background-color: $active-push-color;
+  opacity: 1;
 }
 
 .news__swiper .swiper-pagination-bullet-active {
@@ -172,10 +207,11 @@
 
 @media (min-width: $tablet-width) {
   .news {
-    padding: 50px 45px 112px;
+    padding: 50px 45px;
   }
 
   .news .swiper-button {
+    bottom: 54px;
     right: 45px;
   }
 
@@ -195,31 +231,71 @@
   }
 
   .news__swiper {
-    height: 730px;
+    padding-bottom: 62px;
   }
 
   .news__swiper .swiper-slide {
+    gap: 30px;
     width: 324px;
+    height: 730px;
+  }
+
+  .news__swiper .swiper-card {
+    height: 350px;
     border-radius: 12px;
   }
 
   .news__swiper h3 {
-    padding: 10px 16px 6px 0;
+    padding: 10px 110px 6px 0;
     font-size: 20px;
     line-height: 24px;
   }
 
   .news__swiper p {
     margin: 0;
-    padding: 12px 68px 10px 0;
+    padding: 12px 150px 18px 0;
     font-size: 14px;
     line-height: 20px;
+  }
+
+  .news__swiper a {
+    right: 102px;
+    bottom: 31px;
+  }
+
+  .news__swiper .swiper-pagination {
+    gap: 12px;
+    left: 50%;
+    width: 188px;
+    transform: translateX(-50%);
+  }
+
+  .news__swiper .swiper-pagination-bullet {
+    padding: 6px 11px;
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .news__swiper .swiper-pagination-bullet-active {
+    color: $base-white-color;
+    background-color: $extra-background-color;
   }
 }
 
 @media (min-width: $desktop-width) {
   .news {
-    padding: 60px 45px 112px;
+    padding: 60px 45px;
+  }
+
+  .news .swiper-button {
+    bottom: 65px;
+    right: 100px;
+  }
+
+  .news .swiper-button-prev {
+    left: 100px;
   }
 
   .news__title {
@@ -233,11 +309,31 @@
   }
 
   .news__swiper {
-    height: 400px;
+    padding-bottom: 72px;
   }
 
   .news__swiper .swiper-slide {
-    width: 324px;
+    flex-direction: row;
+    gap: 32px;
+    width: auto;
+    height: 400px;
+  }
+
+  .news__swiper .swiper-card {
+    height: 400px;
+    flex-shrink: 0;
+  }
+
+  .news__swiper .swiper-slide > :first-child {
+    width: 604px;
+  }
+
+  .news__swiper .swiper-slide > :last-child {
+    width: 286px;
+  }
+
+  .news__swiper a {
+    right: 25px;
   }
 
   .news__swiper h3 {
@@ -253,4 +349,3 @@
     line-height: 20px;
   }
 }
-

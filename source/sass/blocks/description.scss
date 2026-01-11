@@ -22,6 +22,7 @@
 
 @media (min-width: $tablet-width) {
   .description {
+    gap: 27px;
     margin-left: auto;
   }
 
@@ -35,3 +36,12 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .description {
+    gap: 25px;
+  }
+
+  .description dt {
+    margin-bottom: 9px;
+  }
+}

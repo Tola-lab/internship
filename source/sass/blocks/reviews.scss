@@ -8,7 +8,7 @@
 }
 
 .reviews__title {
-  padding: 5px 5px 5px 0;
+  padding: 6px 5px 3px 0;
 }
 
 .reviews .swiper-button {
@@ -23,7 +23,7 @@
 }
 
 .reviews__swiper .swiper-slide {
-  padding: 30px 15px;
+  padding: 28px 15px 30px;
   border: 2px solid #316dc2;
   border-radius: 16px;
 }
@@ -41,6 +41,11 @@
     position: relative;
     margin-right: -45px;
     padding: 50px 45px 60px;
+  }
+
+  .reviews__title {
+    padding: 0;
+    margin-bottom: 40px;
   }
 
   .reviews .swiper-button {
@@ -92,6 +97,10 @@
     padding: 60px 100px;
   }
 
+  .reviews__title {
+    padding: 5px 3px;
+  }
+
   .reviews .swiper-button {
     top: auto;
     right: 100px;
@@ -104,14 +113,14 @@
   }
 
   .reviews__swiper .swiper-wrapper {
-    margin-bottom: 64px;
+    margin-bottom: 62px;
   }
 
   .reviews__swiper .swiper-slide {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding: 50px 48px 50px 52px;
+    padding: 50px 47px 50px 50px;
     width: 604px;
     min-height: 483px;
   }
