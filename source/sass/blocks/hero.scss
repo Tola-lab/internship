@@ -3,6 +3,59 @@
   color: $extra-background-color;
 }
 
+.hero__bullets-wrapper {
+  padding: 10px 16px;
+  width: fit-content;
+  min-width: 48px;
+  min-height: 8px;
+}
+
+.hero__swiper-pagination.swiper-pagination {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  bottom: auto;
+  left: auto;
+  width: auto;
+}
+
+.hero__pagination-bullet {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.hero__pagination-bullet::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 2px solid #316dc2;
+  transition: all 0.2s;
+}
+
+.hero__pagination-bullet--active::before {
+  background-color: #316dc2;
+}
+
+.hero__pagination-bullet:hover::before {
+  opacity: 0.7;
+}
+
 .hero__swiper .swiper-slide--global {
   background-image: url("../../img/global-hero-mobile@1x.jpg");
 
@@ -57,7 +110,7 @@
 
 .hero__swiper h2 {
   margin: 0;
-  padding: 48px 15px 16px 14px;
+  padding: 20px 15px 16px 14px;
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
@@ -79,6 +132,22 @@
 }
 
 @media (min-width: $tablet-width) {
+  .hero__bullets-wrapper {
+    padding: 14px 20px;
+    min-width: 60px;
+    min-height: 12px;
+  }
+
+  .hero__pagination-bullet {
+    width: 12px;
+    height: 12px;
+  }
+
+  .hero__pagination-bullet::before {
+    width: 12px;
+    height: 12px;
+  }
+
   .hero__swiper .swiper-slide--global {
     background-image: url("../../img/global-hero-tablet@1x.jpg");
 
@@ -129,7 +198,7 @@
   }
 
   .hero__swiper h2 {
-    padding: 70px 69px 24px 40px;
+    padding: 30px 69px 24px 40px;
     font-size: 36px;
     line-height: 44px;
   }
@@ -194,7 +263,7 @@
   }
 
   .hero__swiper h2 {
-    padding: 80px 50px 30px;
+    padding: 40px 50px 30px;
     font-size: 54px;
     line-height: 62px;
   }
