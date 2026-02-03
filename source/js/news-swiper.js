@@ -1,9 +1,9 @@
 import Swiper from 'swiper';
-import { Pagination, Navigation } from 'swiper/modules';
+import { Pagination, Navigation, Grid } from 'swiper/modules';
 
 export const initNewsSwiper = () => {
   const newsSwiper = new Swiper('.news__swiper', {
-    modules: [Navigation, Pagination],
+    modules: [Navigation, Pagination, Grid],
     loop: false,
     speed: 300,
 
@@ -16,8 +16,6 @@ export const initNewsSwiper = () => {
     },
 
     slidesPerView: 1,
-    slidesPerGroup: 1,
-    spaceBetween: 15,
     watchSlidesProgress: true,
 
     navigation: {
@@ -27,13 +25,31 @@ export const initNewsSwiper = () => {
     },
 
     breakpoints: {
+      320: {
+        slidesPerView: 1,
+        allowTouchMove: true,
+        spaceBetween: 20,
+        grid: {
+          rows: 2,
+          fill: 'column',
+        },
+      },
       768: {
-        slidesPerView: 'auto',
-        spaceBetween: 30
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        allowTouchMove: true,
+        spaceBetween: 30,
+        grid: {
+          rows: 2,
+          fill: 'row',
+        },
       },
       1440: {
         slidesPerView: 'auto',
+        slidesPerGroup: 3,
+        allowTouchMove: false,
         spaceBetween: 32,
+        grid: false,
       },
     },
   });
