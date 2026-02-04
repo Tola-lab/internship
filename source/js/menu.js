@@ -69,7 +69,16 @@ const showSelectMenu = (evt) => {
   selectButton.classList.toggle('navigation__select-button--active', isOpen);
 };
 
+const onMenuLinkClick = (evt) => {
+  const menuLink = evt.target.closest('.navigation__link');
+
+  if (!menuLink.classList.contains('navigation__select-button')) {
+    closeMenu();
+  }
+};
+
 export const initMobileMenu = () => {
   navToggle.addEventListener('click', showMenu);
   navMain.addEventListener('click', showSelectMenu);
+  navMain.addEventListener('click', onMenuLinkClick);
 };

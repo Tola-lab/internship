@@ -34,16 +34,16 @@
           <button class="navigation__select-button" type="button">Программы</button>
           <ul class="navigation__options-list">
             <li class="navigation__item">
-              <a class="navigation__link navigation__link--option" href="#">Стажировки</a>
+              <a class="navigation__link navigation__link--option" href="#programs">Стажировки</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link navigation__link--option" href="#">Волонтёрство</a>
+              <a class="navigation__link navigation__link--option" href="#programs">Волонтёрство</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link navigation__link--option" href="#">Учёба</a>
+              <a class="navigation__link navigation__link--option" href="#programs">Учёба</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link navigation__link--option" href="#">Религия</a>
+              <a class="navigation__link navigation__link--option" href="#programs">Религия</a>
             </li>
           </ul>
         </li>
@@ -57,16 +57,16 @@
           <button class="navigation__select-button" type="button">Новости</button>
           <ul class="navigation__options-list">
             <li class="navigation__item">
-              <a class="navigation__link navigation__link--option" href="#">Стажировки</a>
+              <a class="navigation__link navigation__link--option" href="#news">Волонтёрство</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link navigation__link--option" href="#">Волонтёрство</a>
+              <a class="navigation__link navigation__link--option" href="#news">Стажировки</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link navigation__link--option" href="#">Учёба</a>
+              <a class="navigation__link navigation__link--option" href="#news">Карьера</a>
             </li>
             <li class="navigation__item">
-              <a class="navigation__link navigation__link--option" href="#">Религия</a>
+              <a class="navigation__link navigation__link--option" href="#news">Путешествия</a>
             </li>
           </ul>
         </li>
@@ -254,16 +254,18 @@
           <p>Свяжитесь с координатором, чтобы узнать полную информацию.
             Вы получите актуальные сведения о доступных программах
             и городах, в которых можете пройти программу.</p>
-          <picture>
-            <source width="498" height="363" type="image/webp" media="(min-width: 1440px)" srcset="img/grant-desktop@1x.webp 1x, img/grant-desktop@2x.webp 2x">
-            <source width="678" height="375" type="image/webp" media="(min-width: 768px)" srcset="img/grant-tablet@1x.webp 1x, img/grant-tablet@2x.webp 2x">
-            <source width="290" height="200" type="image/webp" srcset="img/grant-mobile@1x.webp 1x, img/grant-mobile@2x.webp 2x">
+          <div class="grant__img">
+            <picture>
+              <source width="498" height="363" type="image/webp" media="(min-width: 1440px)" srcset="img/grant-desktop@1x.webp 1x, img/grant-desktop@2x.webp 2x">
+              <source width="678" height="375" type="image/webp" media="(min-width: 768px)" srcset="img/grant-tablet@1x.webp 1x, img/grant-tablet@2x.webp 2x">
+              <source width="290" height="200" type="image/webp" srcset="img/grant-mobile@1x.webp 1x, img/grant-mobile@2x.webp 2x">
 
-            <source width="498" height="363" type="image/jpg" media="(min-width: 1440px)" srcset="img/grant-desktop@1x.jpg, img/grant-desktop@2x.jpg 2x">
-            <source width="678" height="375" type="image/jpg" media="(min-width: 768px)" srcset="img/grant-tablet@1x.jpg, img/grant-tablet@2x.jpg 2x">
+              <source width="498" height="363" type="image/jpg" media="(min-width: 1440px)" srcset="img/grant-desktop@1x.jpg, img/grant-desktop@2x.jpg 2x">
+              <source width="678" height="375" type="image/jpg" media="(min-width: 768px)" srcset="img/grant-tablet@1x.jpg, img/grant-tablet@2x.jpg 2x">
 
-            <img src="img/grant-mobile@1x.jpg" srcset="img/grant-mobile@2x.jpg 2x" width="290" height="200" alt="Указатель разных стран">
-          </picture>
+              <img src="img/grant-mobile@1x.jpg" srcset="img/grant-mobile@2x.jpg 2x" width="290" height="200" alt="Указатель разных стран">
+            </picture>
+          </div>
         </div>
         <div class="grant__instructions instructions">
           <h3 class="instructions__title">Чтобы получить грант на обучение, вам нужно:</h3>
@@ -286,221 +288,223 @@
     </section>
 
     <section class="news" data-test="news" id="news">
-      <h2 class="news__title title">Новости и материалы</h2>
-      <div class="news__tabs tabs" role="tablist" aria-label="Навигация по разделам">
-        <button class="tabs__button tabs__button--active" role="tab" type="button">Общее</button>
-        <button class="tabs__button" role="tab" type="button">Волонтёрство</button>
-        <button class="tabs__button" role="tab" type="button">Стажировки</button>
-        <button class="tabs__button" role="tab" type="button">Карьера</button>
-        <button class="tabs__button" role="tab" type="button">Путешествия</button>
+      <div class="news__wrapper">
+        <h2 class="news__title title">Новости и материалы</h2>
+        <div class="news__tabs tabs" role="tablist" aria-label="Навигация по разделам">
+          <button class="tabs__button tabs__button--active" role="tab" type="button">Общее</button>
+          <button class="tabs__button" role="tab" type="button">Волонтёрство</button>
+          <button class="tabs__button" role="tab" type="button">Стажировки</button>
+          <button class="tabs__button" role="tab" type="button">Карьера</button>
+          <button class="tabs__button" role="tab" type="button">Путешествия</button>
+        </div>
+        <div class="news__swiper swiper">
+          <ul class="news__list swiper-wrapper">
+            <li class="swiper-slide swiper-slide--interview">
+              <div class="swiper-card">
+                <div class="swiper-text">
+                  <span class="swiper-nebo-date nebo nebo--tr">23/03/2023</span>
+                  <h3 class="swiper-nebo-title nebo nebo--tr">Интервью с участницей программы стажировки</h3>
+                  <div class="swiper-nebo-description nebo nebo--tr">
+                    <p>Саша рассказывает, как попала в программу и как прошла 6-месячная стажировка в ISOFound</p>
+                    <a href="#">
+                      <span class="visually-hidden">Подробнее</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="swiper-slide swiper-slide--travel">
+              <div class="swiper-card">
+                <div class="swiper-text">
+                  <span class="swiper-nebo-date nebo nebo--tr">20/03/2023</span>
+                  <h3 class="swiper-nebo-title nebo nebo--tr">Путешествуем по миру</h3>
+                  <div class="swiper-nebo-description nebo nebo--tr">
+                    <p>Какие места посещают наши студенты весной</p>
+                    <a href="#">
+                      <span class="visually-hidden">Подробнее</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="swiper-slide swiper-slide--volunteer">
+              <div class="swiper-card">
+                <div class="swiper-text">
+                  <span class="swiper-nebo-date nebo nebo--tr">17/03/2023</span>
+                  <h3 class="swiper-nebo-title nebo nebo--tr">Новая программа волонтёрства</h3>
+                  <div class="swiper-nebo-description nebo nebo--tr">
+                    <p>Программа помощи детям длительностью 4 месяца</p>
+                    <a href="#">
+                      <span class="visually-hidden">Подробнее</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="swiper-slide swiper-slide--career">
+              <div class="swiper-card">
+                <div class="swiper-text">
+                  <span class="swiper-nebo-date nebo nebo--tr">10/03/2023</span>
+                  <h3 class="swiper-nebo-title nebo nebo--tr">Построй свою карьеру</h3>
+                  <div class="swiper-nebo-description nebo nebo--tr">
+                    <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
+                    <a href="#">
+                      <span class="visually-hidden">Подробнее</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="swiper-slide swiper-slide--volunteer">
+              <div class="swiper-card">
+                <div class="swiper-text">
+                  <span class="swiper-nebo-date nebo nebo--tr">17/03/2023</span>
+                  <h3 class="swiper-nebo-title nebo nebo--tr">Новая программа волонтёрства</h3>
+                  <div class="swiper-nebo-description nebo nebo--tr">
+                    <p>Программа помощи детям длительностью 4 месяца</p>
+                    <a href="#">
+                      <span class="visually-hidden">Подробнее</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="swiper-slide swiper-slide--career">
+              <div class="swiper-card">
+                <div class="swiper-text">
+                  <span class="swiper-nebo-date nebo nebo--tr">10/03/2023</span>
+                  <h3 class="swiper-nebo-title nebo nebo--tr">Построй свою карьеру</h3>
+                  <div class="swiper-nebo-description nebo nebo--tr">
+                    <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
+                    <a href="#">
+                      <span class="visually-hidden">Подробнее</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="swiper-slide swiper-slide--volunteer">
+              <div class="swiper-card">
+                <div class="swiper-text">
+                  <span class="swiper-nebo-date nebo nebo--tr">17/03/2023</span>
+                  <h3 class="swiper-nebo-title nebo nebo--tr">Новая программа волонтёрства</h3>
+                  <div class="swiper-nebo-description nebo nebo--tr">
+                    <p>Программа помощи детям длительностью 4 месяца</p>
+                    <a href="#">
+                      <span class="visually-hidden">Подробнее</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="swiper-slide swiper-slide--career">
+              <div class="swiper-card">
+                <div class="swiper-text">
+                  <span class="swiper-nebo-date nebo nebo--tr">10/03/2023</span>
+                  <h3 class="swiper-nebo-title nebo nebo--tr">Построй свою карьеру</h3>
+                  <div class="swiper-nebo-description nebo nebo--tr">
+                    <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
+                    <a href="#">
+                      <span class="visually-hidden">Подробнее</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="swiper-slide swiper-slide--career">
+              <div class="swiper-card">
+                <div class="swiper-text">
+                  <span class="swiper-nebo-date nebo nebo--tr">10/03/2023</span>
+                  <h3 class="swiper-nebo-title nebo nebo--tr">Построй свою карьеру</h3>
+                  <div class="swiper-nebo-description nebo nebo--tr">
+                    <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
+                    <a href="#">
+                      <span class="visually-hidden">Подробнее</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="swiper-slide swiper-slide--career">
+              <div class="swiper-card">
+                <div class="swiper-text">
+                  <span class="swiper-nebo-date nebo nebo--tr">10/03/2023</span>
+                  <h3 class="swiper-nebo-title nebo nebo--tr">Построй свою карьеру</h3>
+                  <div class="swiper-nebo-description nebo nebo--tr">
+                    <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
+                    <a href="#">
+                      <span class="visually-hidden">Подробнее</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="swiper-slide swiper-slide--career">
+              <div class="swiper-card">
+                <div class="swiper-text">
+                  <span class="swiper-nebo-date nebo nebo--tr">10/03/2023</span>
+                  <h3 class="swiper-nebo-title nebo nebo--tr">Построй свою карьеру</h3>
+                  <div class="swiper-nebo-description nebo nebo--tr">
+                    <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
+                    <a href="#">
+                      <span class="visually-hidden">Подробнее</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="swiper-slide swiper-slide--career">
+              <div class="swiper-card">
+                <div class="swiper-text">
+                  <span class="swiper-nebo-date nebo nebo--tr">10/03/2023</span>
+                  <h3 class="swiper-nebo-title nebo nebo--tr">Построй свою карьеру</h3>
+                  <div class="swiper-nebo-description nebo nebo--tr">
+                    <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
+                    <a href="#">
+                      <span class="visually-hidden">Подробнее</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="swiper-slide swiper-slide--career">
+              <div class="swiper-card">
+                <div class="swiper-text">
+                  <span class="swiper-nebo-date nebo nebo--tr">10/03/2023</span>
+                  <h3 class="swiper-nebo-title nebo nebo--tr">Построй свою карьеру</h3>
+                  <div class="swiper-nebo-description nebo nebo--tr">
+                    <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
+                    <a href="#">
+                      <span class="visually-hidden">Подробнее</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="swiper-slide swiper-slide--career">
+              <div class="swiper-card">
+                <div class="swiper-text">
+                  <span class="swiper-nebo-date nebo nebo--tr">10/03/2023</span>
+                  <h3 class="swiper-nebo-title nebo nebo--tr">Построй свою карьеру</h3>
+                  <div class="swiper-nebo-description nebo nebo--tr">
+                    <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
+                    <a href="#">
+                      <span class="visually-hidden">Подробнее</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="swiper-pagination"></div>
+        </div>
+        <button class="swiper-button swiper-button-prev swiper-button--deactivated" type="button">
+          <span class="visually-hidden">Предыдущий слайд</span>
+        </button>
+        <button class="swiper-button swiper-button-next" type="button">
+          <span class="visually-hidden">Следующий слайд</span>
+        </button>
       </div>
-      <div class="news__swiper swiper">
-        <ul class="news__list swiper-wrapper">
-          <li class="swiper-slide swiper-slide--interview">
-            <div class="swiper-card">
-              <div class="swiper-text">
-                <span class="swiper-nebo-date nebo nebo--tr">23/03/2023</span>
-                <h3 class="swiper-nebo-title nebo nebo--tr">Интервью с участницей программы стажировки</h3>
-                <div class="swiper-nebo-description nebo nebo--tr">
-                  <p>Саша рассказывает, как попала в программу и как прошла 6-месячная стажировка в ISOFound</p>
-                  <a href="#">
-                    <span class="visually-hidden">Подробнее</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="swiper-slide swiper-slide--travel">
-            <div class="swiper-card">
-              <div class="swiper-text">
-                <span class="swiper-nebo-date nebo nebo--tr">20/03/2023</span>
-                <h3 class="swiper-nebo-title nebo nebo--tr">Путешествуем по миру</h3>
-                <div class="swiper-nebo-description nebo nebo--tr">
-                  <p>Какие места посещают наши студенты весной</p>
-                  <a href="#">
-                    <span class="visually-hidden">Подробнее</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="swiper-slide swiper-slide--volunteer">
-            <div class="swiper-card">
-              <div class="swiper-text">
-                <span class="swiper-nebo-date nebo nebo--tr">17/03/2023</span>
-                <h3 class="swiper-nebo-title nebo nebo--tr">Новая программа волонтёрства</h3>
-                <div class="swiper-nebo-description nebo nebo--tr">
-                  <p>Программа помощи детям длительностью 4 месяца</p>
-                  <a href="#">
-                    <span class="visually-hidden">Подробнее</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="swiper-slide swiper-slide--career">
-            <div class="swiper-card">
-              <div class="swiper-text">
-                <span class="swiper-nebo-date nebo nebo--tr">10/03/2023</span>
-                <h3 class="swiper-nebo-title nebo nebo--tr">Построй свою карьеру</h3>
-                <div class="swiper-nebo-description nebo nebo--tr">
-                  <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
-                  <a href="#">
-                    <span class="visually-hidden">Подробнее</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="swiper-slide swiper-slide--volunteer">
-            <div class="swiper-card">
-              <div class="swiper-text">
-                <span class="swiper-nebo-date nebo nebo--tr">17/03/2023</span>
-                <h3 class="swiper-nebo-title nebo nebo--tr">Новая программа волонтёрства</h3>
-                <div class="swiper-nebo-description nebo nebo--tr">
-                  <p>Программа помощи детям длительностью 4 месяца</p>
-                  <a href="#">
-                    <span class="visually-hidden">Подробнее</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="swiper-slide swiper-slide--career">
-            <div class="swiper-card">
-              <div class="swiper-text">
-                <span class="swiper-nebo-date nebo nebo--tr">10/03/2023</span>
-                <h3 class="swiper-nebo-title nebo nebo--tr">Построй свою карьеру</h3>
-                <div class="swiper-nebo-description nebo nebo--tr">
-                  <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
-                  <a href="#">
-                    <span class="visually-hidden">Подробнее</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="swiper-slide swiper-slide--volunteer">
-            <div class="swiper-card">
-              <div class="swiper-text">
-                <span class="swiper-nebo-date nebo nebo--tr">17/03/2023</span>
-                <h3 class="swiper-nebo-title nebo nebo--tr">Новая программа волонтёрства</h3>
-                <div class="swiper-nebo-description nebo nebo--tr">
-                  <p>Программа помощи детям длительностью 4 месяца</p>
-                  <a href="#">
-                    <span class="visually-hidden">Подробнее</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="swiper-slide swiper-slide--career">
-            <div class="swiper-card">
-              <div class="swiper-text">
-                <span class="swiper-nebo-date nebo nebo--tr">10/03/2023</span>
-                <h3 class="swiper-nebo-title nebo nebo--tr">Построй свою карьеру</h3>
-                <div class="swiper-nebo-description nebo nebo--tr">
-                  <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
-                  <a href="#">
-                    <span class="visually-hidden">Подробнее</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="swiper-slide swiper-slide--career">
-            <div class="swiper-card">
-              <div class="swiper-text">
-                <span class="swiper-nebo-date nebo nebo--tr">10/03/2023</span>
-                <h3 class="swiper-nebo-title nebo nebo--tr">Построй свою карьеру</h3>
-                <div class="swiper-nebo-description nebo nebo--tr">
-                  <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
-                  <a href="#">
-                    <span class="visually-hidden">Подробнее</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="swiper-slide swiper-slide--career">
-            <div class="swiper-card">
-              <div class="swiper-text">
-                <span class="swiper-nebo-date nebo nebo--tr">10/03/2023</span>
-                <h3 class="swiper-nebo-title nebo nebo--tr">Построй свою карьеру</h3>
-                <div class="swiper-nebo-description nebo nebo--tr">
-                  <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
-                  <a href="#">
-                    <span class="visually-hidden">Подробнее</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="swiper-slide swiper-slide--career">
-            <div class="swiper-card">
-              <div class="swiper-text">
-                <span class="swiper-nebo-date nebo nebo--tr">10/03/2023</span>
-                <h3 class="swiper-nebo-title nebo nebo--tr">Построй свою карьеру</h3>
-                <div class="swiper-nebo-description nebo nebo--tr">
-                  <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
-                  <a href="#">
-                    <span class="visually-hidden">Подробнее</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="swiper-slide swiper-slide--career">
-            <div class="swiper-card">
-              <div class="swiper-text">
-                <span class="swiper-nebo-date nebo nebo--tr">10/03/2023</span>
-                <h3 class="swiper-nebo-title nebo nebo--tr">Построй свою карьеру</h3>
-                <div class="swiper-nebo-description nebo nebo--tr">
-                  <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
-                  <a href="#">
-                    <span class="visually-hidden">Подробнее</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="swiper-slide swiper-slide--career">
-            <div class="swiper-card">
-              <div class="swiper-text">
-                <span class="swiper-nebo-date nebo nebo--tr">10/03/2023</span>
-                <h3 class="swiper-nebo-title nebo nebo--tr">Построй свою карьеру</h3>
-                <div class="swiper-nebo-description nebo nebo--tr">
-                  <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
-                  <a href="#">
-                    <span class="visually-hidden">Подробнее</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="swiper-slide swiper-slide--career">
-            <div class="swiper-card">
-              <div class="swiper-text">
-                <span class="swiper-nebo-date nebo nebo--tr">10/03/2023</span>
-                <h3 class="swiper-nebo-title nebo nebo--tr">Построй свою карьеру</h3>
-                <div class="swiper-nebo-description nebo nebo--tr">
-                  <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
-                  <a href="#">
-                    <span class="visually-hidden">Подробнее</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </li>
-        </ul>
-        <div class="swiper-pagination"></div>
-      </div>
-      <button class="swiper-button swiper-button-prev swiper-button--deactivated" type="button">
-        <span class="visually-hidden">Предыдущий слайд</span>
-      </button>
-      <button class="swiper-button swiper-button-next" type="button">
-        <span class="visually-hidden">Следующий слайд</span>
-      </button>
     </section>
 
     <section class="questions" data-test="FAQ">
@@ -607,6 +611,32 @@
                 <p>Каждый день был возможностью оказать ощутимое влияние на жизнь других людей. Я бы очень рекомендовал эту волонтёрскую программу всем, кто ищет значимый и незабываемый опыт. Организация была на высшем уровне. Для меня было честью быть частью такой удивительной инициативы.</p>
               </div>
             </div>
+            <div class="swiper-slide">
+              <div class="swiper-header">
+                <picture>
+                  <source width="90" height="90" type="image/webp" media="(min-width: 768px)" srcset="img/reviews-lola@1x.webp, img/reviews-lola@2x.webp 2x">
+                  <source width="60" height="60" type="image/webp" srcset="img/reviews-lola@1x.webp 1x, img/reviews-lola@2x.webp 2x">
+
+                  <source width="90" height="90" type="image/png" media="(min-width: 768px)" srcset="img/reviews-lola@1x.png, img/reviews-lola@2x.png 2x">
+                  <img src="img/reviews-lola@1x.png" srcset="img/reviews-lola@2x.png 2x" width="60" height="60" alt="Лола Алекс">
+                </picture>
+                <p>Лола<br>Алекс</p>
+                <dl class="swiper-description description">
+                  <div class="description__item">
+                    <dt>Программа</dt>
+                    <dd>Masa Art Challenge</dd>
+                  </div>
+                  <div class="description__item">
+                    <dt>Дата</dt>
+                    <dd>Осень 2022</dd>
+                  </div>
+                </dl>
+              </div>
+              <div class="swiper-content">
+                <h3>Я могу с уверенностью сказать, что это был один из самых незабываемых опытов в&nbsp;жизни!</h3>
+                <p>Я рекомендую программу «Стажировка» всем студентам, желающим получить незабываемые впечатления. Сочетание путешествий, общения и значимой работы действительно отличает её от других программ, и я чувствую огромную благодарность за предоставленную мне возможность.</p>
+              </div>
+            </div>
           </div>
           <div class="swiper-scrollbar"></div>
         </div>
@@ -634,16 +664,18 @@
             </ul>
           </address>
         </div>
-        <picture>
-          <source width="1240" height="486" type="image/webp" media="(min-width: 1440px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
-          <source width="678" height="500" type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
-          <source width="290" height="240" type="image/webp" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
+        <div class="contacts__img">
+          <picture>
+            <source width="1240" height="486" type="image/webp" media="(min-width: 1440px)" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
+            <source width="678" height="500" type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
+            <source width="290" height="240" type="image/webp" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
 
-          <source width="1240" height="486" type="image/png" media="(min-width: 1440px)" srcset="img/map-desktop@1x.png, img/map-desktop@2x.png 2x">
-          <source width="678" height="500" type="image/png" media="(min-width: 768px)" srcset="img/map-tablet@1x.png, img/map-tablet@2x.png 2x">
+            <source width="1240" height="486" type="image/png" media="(min-width: 1440px)" srcset="img/map-desktop@1x.png, img/map-desktop@2x.png 2x">
+            <source width="678" height="500" type="image/png" media="(min-width: 768px)" srcset="img/map-tablet@1x.png, img/map-tablet@2x.png 2x">
 
-          <img src="img/map-mobile@1x.png" srcset="img/map-mobile@2x.png 2x" width="290" height="240" alt="г. Новосибирск, ул. Щетинкина 68, культурный центр">
-        </picture>
+            <img src="img/map-mobile@1x.png" srcset="img/map-mobile@2x.png 2x" width="290" height="240" alt="г. Новосибирск, ул. Щетинкина 68, культурный центр">
+          </picture>
+        </div>
       </div>
     </section>
 

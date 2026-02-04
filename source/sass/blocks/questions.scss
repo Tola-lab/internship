@@ -19,7 +19,9 @@
 
 @media (min-width: $desktop-width) {
   .questions__wrapper {
+    margin: 0 auto;
     padding: 60px 206px;
+    max-width: 1440px;
   }
 
   .questions__title {

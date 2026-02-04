@@ -103,7 +103,7 @@
   width: 10px;
   height: 10px;
   background-color: $base-white-color;
-  mask-image: url("../../__spritemap#sprite-arrow-view");
+  mask-image: url("../../../__spritemap#sprite-arrow-view");
   mask-size: 10px 10px;
   mask-position: center;
   mask-repeat: no-repeat;
@@ -245,7 +245,8 @@
   .programs__wrapper {
     position: relative;
     padding: 60px 100px;
-    margin: 0;
+    margin: 0 auto;
+    max-width: 1440px;
   }
 
   .programs__button {

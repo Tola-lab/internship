@@ -124,6 +124,7 @@
   margin: 0;
   padding: 9px 44px 6px 0;
   background-color: $base-background-color;
+  font-weight: 500;
   font-size: 16px;
   line-height: 18px;
   color: $extra-background-color;
@@ -178,7 +179,7 @@
   width: 10px;
   height: 10px;
   background-color: $base-white-color;
-  mask-image: url("../../__spritemap#sprite-arrow-view");
+  mask-image: url("../../../__spritemap#sprite-arrow-view");
   mask-size: 10px 10px;
   mask-position: center;
   mask-repeat: no-repeat;
@@ -202,13 +203,10 @@
 }
 
 .news__swiper .swiper-pagination {
-  position: absolute;
   display: flex;
+  justify-content: center;
   gap: 8px;
-  top: auto;
-  left: 66px;
   bottom: 0;
-  width: 152px;
 }
 
 .news__swiper .swiper-pagination-bullet {
@@ -250,6 +248,7 @@
   }
 
   .news__tabs {
+    justify-content: center;
     gap: 10px;
     margin-right: 0;
     margin-bottom: 30px;
@@ -352,15 +351,22 @@
 
 @media (min-width: $desktop-width) {
   .news {
-    padding: 60px 45px;
+    padding: 0;
   }
 
-  .news .swiper-button {
-    bottom: 65px;
+  .news__wrapper {
+    position: relative;
+    margin: 0 auto;
+    padding: 60px 45px;
+    max-width: 1440px;
+  }
+
+  .news__wrapper .swiper-button {
+    bottom: 66px;
     right: 100px;
   }
 
-  .news .swiper-button-prev {
+  .news__wrapper .swiper-button-prev {
     left: 100px;
   }
 

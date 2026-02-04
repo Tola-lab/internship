@@ -68,6 +68,7 @@
   height: 22px;
   border: none;
   cursor: pointer;
+  background-color: transparent;
 }
 
 .swiper-button::after,
@@ -80,7 +81,7 @@
   width: 22px;
   height: 22px;
   background-color: $extra-background-color;
-  mask-image: url("../../__spritemap#sprite-arrow-view");
+  mask-image: url("../../../__spritemap#sprite-arrow-view");
   mask-repeat: no-repeat;
   mask-position: center;
   mask-size: 10px 10px;
@@ -144,6 +145,12 @@
 
   .swiper-slide--global .hero__button {
     bottom: 79px;
+  }
+}
+
+@media (width >= 1000px) {
+  .swiper-slide--global .hero__button {
+    bottom: 45px;
   }
 }
 

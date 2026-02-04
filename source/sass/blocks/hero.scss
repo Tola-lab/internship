@@ -218,7 +218,7 @@
   }
 }
 
-@media (min-width: $desktop-width) {
+@media (width >= 1000px) {
   .hero__swiper .swiper-slide--global {
     background-image: url("../../img/global-hero-desktop@1x.jpg");
 
@@ -245,17 +245,18 @@
   }
 
   .hero__swiper .swiper-slide {
-    padding: 116px 372px 60px 100px;
+    padding: 116px 100px 60px;
     min-height: 800px;
+    background-size: 1440px 800px;
   }
 
   .hero__swiper .swiper-nebo-tr {
-    --nb-r: 20px;
-    --nb-w: 828px;
-    --nb-h: 0px;
+    --nb-w: 634px;
   }
 
   .hero__swiper .swiper-text {
+    margin: 0 auto;
+    max-width: 1000px;
     border-radius: 20px 20px 30px 30px;
 
     --nb-r: 22px;
@@ -265,8 +266,8 @@
 
   .hero__swiper h2 {
     padding: 40px 50px 30px;
-    font-size: 54px;
-    line-height: 62px;
+    font-size: 48px;
+    line-height: 48px;
   }
 
   .hero__swiper p {
@@ -280,5 +281,22 @@
     padding: 20px 80px 20px 30px;
     bottom: 35px;
     right: 225px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .hero__swiper .swiper-slide {
+    padding-right: 372px;
+  }
+
+  .hero__swiper .swiper-nebo-tr {
+    --nb-r: 20px;
+    --nb-w: 828px;
+    --nb-h: 0px;
+  }
+
+  .hero__swiper h2 {
+    font-size: 54px;
+    line-height: 62px;
   }
 }

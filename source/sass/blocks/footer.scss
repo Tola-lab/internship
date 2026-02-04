@@ -161,7 +161,9 @@
 
 @media (min-width: $desktop-width) {
   .footer__wrapper {
+    margin: 0 auto;
     padding: 60px 100px 40px;
+    max-width: 1440px;
   }
 
   .footer__header {
